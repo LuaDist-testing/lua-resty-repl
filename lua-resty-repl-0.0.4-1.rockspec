@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = 'lua-resty-repl'
-version = '0.0.4-0'
+version = '0.0.4-1'
 -- LuaDist source
 source = {
-  tag = "0.0.4-0",
+  tag = "0.0.4-1",
   url = "git://github.com/LuaDist-testing/lua-resty-repl.git"
 }
 -- Original source
 -- source = {
 --   url = 'git://github.com/saks/lua-resty-repl',
---   tag = 'v0.0.4'
+--   tag = 'v0.0.4-1'
 -- }
 description = {
   summary = 'repl for openresty.',

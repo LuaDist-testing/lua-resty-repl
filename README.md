@@ -24,6 +24,11 @@ Then just drop this snippet anywhere in your code:
 require('resty.repl').start()
 ```
 
+or run as cli:
+```bash
+resty-repl
+```
+
 ## Openresty debugger
 But what makes it really nice is that now you can debug your [openresty](http://openresty.org/en/) code right from running nginx!
 
@@ -101,6 +106,15 @@ or
 ```bash
 resty -e "print(require('resty.repl.readline_utils').history_fn())"
 ```
+## Roadmap
+- colorized output
+- smarter completion
+- full readline support for lua (no ffi environments)
+- remote debugger
+- command for showing function source
+- show context and source of the place in code from where repl was started
+- test suite with [resty-cli](https://github.com/openresty/resty-cli), [luajit](http://luajit.org/) and different versions of lua
+- better inspect library
 
 ## Code Status
 
