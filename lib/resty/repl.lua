@@ -31,10 +31,11 @@ local function handle_input(input)
   if input.exit then exit(0)       end
   if input.stop then return stop() end
 
-  local result = binding:eval(input.code)
-  formatter.print(result, #input.code)
-
-  return result
+  if input.code then
+    local result = binding:eval(input.code)
+    formatter.print(result, #input.code)
+    return result
+  end
 end
 
 local function start()
@@ -49,7 +50,7 @@ local function start()
     local input = ui:readline()
     local result = handle_input(input)
 
-    if result and result:is_success() then
+    if result then
       ui:add_to_history(input.code)
     end
   end

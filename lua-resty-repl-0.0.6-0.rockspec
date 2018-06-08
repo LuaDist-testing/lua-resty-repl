@@ -1,9 +1,17 @@
+-- This file was automatically generated for the LuaDist project.
+
 package = 'lua-resty-repl'
-version = 'scm-0'
+version = '0.0.6-0'
+-- LuaDist source
 source = {
-  url = 'git://github.com/saks/lua-resty-repl',
-  branch = 'master'
+  tag = "0.0.6-0",
+  url = "git://github.com/LuaDist-testing/lua-resty-repl.git"
 }
+-- Original source
+-- source = {
+--   url = 'git://github.com/saks/lua-resty-repl',
+--   tag = 'v0.0.6-0'
+-- }
 description = {
   summary = 'repl for openresty.',
   detailed = [[
@@ -25,7 +33,7 @@ build = {
     ['resty.repl.readline']      = 'lib/resty/repl/readline.lua',
     ['resty.repl.readline_stub'] = 'lib/resty/repl/readline_stub.lua',
     ['resty.repl.readline_utils'] = 'lib/resty/repl/readline_utils.lua',
-    ['resty.repl.sources'] = 'lib/resty/repl/sources.lua',
+    ['resty.repl.sources']       = 'lib/resty/repl/sources.lua',
     ['resty.repl.compiler']      = 'lib/resty/repl/compiler.lua',
     ['resty.repl.formatter']     = 'lib/resty/repl/formatter.lua',
     ['resty.repl.ui']            = 'lib/resty/repl/ui.lua',

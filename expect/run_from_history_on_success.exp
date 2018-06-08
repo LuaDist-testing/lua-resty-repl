@@ -1,0 +1,22 @@
+#!/usr/bin/expect -f
+
+source "expect/lib/helpers.tcl"
+
+spawn "resty-repl"
+
+expect_prompt_line 1
+
+input "1 + 1"
+expect_or_fail "=> 2"
+
+expect_prompt_line 2
+
+press_up_arrow_key
+expect_or_fail "1 + 1"
+
+press_enter_key
+expect_or_fail "=> 2"
+
+expect_prompt_line 3
+
+exit_repl

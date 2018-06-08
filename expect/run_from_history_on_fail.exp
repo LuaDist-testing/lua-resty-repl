@@ -1,0 +1,21 @@
+#!/usr/bin/expect -f
+
+source "expect/lib/helpers.tcl"
+
+spawn "resty-repl"
+
+expect_prompt_line 1
+
+input "x + x"
+expect_or_fail {ERROR: \[string "stdin"]:1: attempt to perform arithmetic on global 'x' (a nil value)}
+
+input "x = 1"
+expect_or_fail "=> nil"
+
+# press UP Arrow key twice, get "x + x" from history
+press_up_arrow_key 2
+press_enter_key
+
+expect_or_fail "=> 2"
+
+exit_repl
